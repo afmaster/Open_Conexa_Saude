@@ -1,4 +1,4 @@
-# Open_Conexa_Saude
+# Conexa Saude Same Day Scheduller Blocker
 
 Conjunto de Scripts para capacitar ao Conexa Saúde a possibilidade de bloquear novos agendamentos dentro do dia corrente.
 
