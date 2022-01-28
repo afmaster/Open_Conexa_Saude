@@ -48,9 +48,15 @@ def delete_wednesday():
             wd.get('https://app.conexasaude.com.br/horarios')
             time.sleep(8)
             # botão excluir horário da tarde
-            botao_excluir = wd.find_element_by_xpath(
-                '/html/body/div[8]/div[5]/div/div[3]/div/div/div[1]/div/div[3]/a/img')
-            botao_excluir.click()
+            try:
+                botao_excluir = wd.find_element_by_xpath('/html/body/div[8]/div[5]/div/div[3]/div/div/div[1]/div/div[3]/a')
+                botao_excluir.click()
+                time.sleep(2)
+            except:
+                botao_excluir = wd.find_element_by_xpath('/html/body/div[8]/div[5]/div/div[3]/div/div/div[1]/div/div[3]/a/img')
+                botao_excluir.click()
+                time.sleep(2)
+
             # sair
             wd.get('https://app.conexasaude.com.br/horarios#')
             wd.quit()
