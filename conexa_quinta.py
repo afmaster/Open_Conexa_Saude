@@ -37,11 +37,11 @@ def navigate_thursday():
         campo_horario_termino.send_keys('1900')
         time.sleep(1)
         try:
-            botao_excluir_horario_quinta = wd.find_element_by_xpath('/html/body/div[8]/div[5]/div/div[4]/div/div/div[1]/div/div[3]/a/img')
+            botao_excluir_horario_quinta = wd.find_element_by_xpath('/html/body/div[8]/div[5]/div/div[4]/div/div/div[1]/div/div[3]/a')
             botao_excluir_horario_quinta.click()
             time.sleep(2)
         except:
-            botao_excluir_horario_quinta = wd.find_element_by_xpath('/html/body/div[8]/div[5]/div/div[4]/div/div/div[1]/div/div[3]/a')
+            botao_excluir_horario_quinta = wd.find_element_by_xpath('/html/body/div[8]/div[5]/div/div[4]/div/div/div[1]/div/div[3]/a/img')
             botao_excluir_horario_quinta.click()
             time.sleep(2)
     except:
